@@ -1,11 +1,18 @@
 {
-    "extends": "../../packages/typescript-config/base.json",
-    "compilerOptions": {
-        "outDir": "dist",
-        "rootDir": "src",
-        "baseUrl": "src",
-        "paths": {
-            "@app/*": ["."]
-        }
-    },
+  "extends": "../../packages/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "../../apps",              
+    "baseUrl": ".",                       
+    "paths": {
+      "@common/*": ["../common/*"],       
+      "@db/*": ["../db/*"],
+      "@ui/*": ["../ui/*"],
+      "@app/*": ["./*"]
+    }
+  },
+  "include": [
+    "./src",                           
+    "../common/src"                      
+  ]
 }

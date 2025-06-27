@@ -1,11 +1,13 @@
 import express from "express";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from '@repo/backend-common/config';
+import { JWT_SECRET } from '../../backend-common/src';
 import { middleware } from "./middleware";
-import { CreateUserSchema, SigninSchema, CreateRoomSchema } from "@repo/common/types";
-import { prismaClient } from "@repo/db/client";
+import { CreateUserSchema, SigninSchema, CreateRoomSchema } from "../../common/src/types";
+
+// Update the path below to the correct location of your prisma client
+import { prismaClient } from  "../../db/src";
 import cors from "cors";
-const JWT_SECRET = process.env.JWT_SECRET || "your_default_secret";
+// const JWT_SECRET = process.env.JWT_SECRET || "your_default_secret";
 
 const app = express();
 app.use(express.json());
@@ -142,3 +144,5 @@ app.get("/room/:slug", async (req, res) => {
 })
 
 app.listen(3001);
+
+export { prismaClient };
