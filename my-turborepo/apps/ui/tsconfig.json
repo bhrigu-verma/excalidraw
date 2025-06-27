@@ -1,4 +1,5 @@
 {
+  
   "extends": "../typescript-config/react-library.json",
   
   "compilerOptions": {
