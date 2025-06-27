@@ -9,6 +9,7 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@types/node": "^24.0.4",
     "prettier": "^3.5.3",
     "turbo": "^2.4.4",
     "typescript": "5.8.2"
@@ -17,11 +18,8 @@
     "node": ">=18"
   },
   "packageManager": "yarn@1.22.22",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "zod": "^3.25.67"
   }
 }

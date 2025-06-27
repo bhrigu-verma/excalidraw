@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "@repo/backend-common/config";
+// Update the import path below to the actual location of JWT_SECRET
+// TODO: Replace with the correct import path if JWT_SECRET is defined elsewhere
+const JWT_SECRET = process.env.JWT_SECRET || "your_default_secret";
 
 
 export function middleware(req: Request, res: Response, next: NextFunction) {

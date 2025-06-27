@@ -5,6 +5,7 @@ import { middleware } from "./middleware";
 import { CreateUserSchema, SigninSchema, CreateRoomSchema } from "@repo/common/types";
 import { prismaClient } from "@repo/db/client";
 import cors from "cors";
+const JWT_SECRET = process.env.JWT_SECRET || "your_default_secret";
 
 const app = express();
 app.use(express.json());
